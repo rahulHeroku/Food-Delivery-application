@@ -1,0 +1,32 @@
+<center><h2>Order History</h2></center>
+<div class="row mb-1 " ng-repeat="item in yourOrders track by $index">
+      <div class="col-md-12">
+      
+          <center>  <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary"><h3>{{item.name}}</h3>	</strong>
+              <h6 class="mb-0">
+                <p class="text-dark" >Status :  <span style="color:orange;">{{item.status}}</span></p>
+              </h6>
+             
+            <h6 class="mb-0">
+                <p class="text-dark" >Order Amount : <span style="color:#5da979;"> {{item.totalAmount}} INR </span></p>
+              </h6>
+            <br><h6 class="mb-0">
+                <p class="text-dark" style="text-align:left;">Order details :</p>
+                <p> <div ng-repeat="details in item.orderItems" style="color:blue; text-align:left;">{{details.quantity}} {{details.name}} {{details.family}} ({{details.price}} INR)</div></p>
+              </h6>
+              <br>
+                <button ng-show="item.isCancellable" type="button" class="btn btn-danger" ng-click="cancel(item)" aria-expanded="false"> Cancel 
+  </button>
+              </div>
+           </center>
+        <hr>    
+      </div>
+</div>      
+      
+      
+      <div ng-show="!yourOrders.length">
+      <br>
+      <center><h5>You have not placed any order yet.</h5> <a href="#/uiTest">uiTesting</a></center>
+    </div>  
+    

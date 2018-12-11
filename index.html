@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="appResources/css/foodList.css">
+<!-- <link rel="stylesheet" href="appResources/css/style.css"> -->
+<title>Food Deliver Service</title>
+
+<!-- scripts below -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+ <script src="appResources/js/app.js"></script>
+ <script type="text/javascript" src="appResources/js/Controller/homeController.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="homeController" style="overflow-x:hidden">
+<!-- header starts -->
+<header>
+<div class="">
+<center> <a href="#default" class="logo">Food Delivery Service</a> </center>
+</div>
+<hr>
+<!-- navbar starts -->
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link" href="#">Home</a>
+  <a href="#/cart" class="nav-item nav-link">
+           Cart <input style="background-color: yellow;
+								width: 24px;
+								height: 24px;
+								border-radius: 50%;
+								color: red;
+								display: inline-table; text-align:center;" id="cartCount" ng-model="enableCheckout" ng-disabled="true"></span>
+        </a>
+  <a class="nav-item nav-link" id="orders" href="#/orders">Orders</a>
+
+</nav>
+<!-- navbar ends -->
+</header>
+<!-- header ends -->
+<hr>
+<ng-view></ng-view>
+
+
+</body>
+</html>

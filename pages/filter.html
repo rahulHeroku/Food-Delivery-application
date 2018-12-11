@@ -1,0 +1,83 @@
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h5>Price</h5>
+  <p><!-- Example single danger button -->
+
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">From</span>
+  </div>
+
+  <input type="number"  ng-model="from" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">INR</span>
+  </div>
+</div>
+  
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">TO</span>
+  </div>
+  <input type="number" ng-model="to" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">INR</span>
+  </div>
+</div>
+  
+</p>
+    <hr>
+  <h5>Rating</h5>
+  <p><div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Less than = </a>
+    <a class="dropdown-item" href="#">Greater than =</a>
+    <a class="dropdown-item" href="#">Between</a>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Star</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Star</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div></p>
+<hr>
+<h5>Category</h5>
+  <p><div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select 
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Less than = </a>
+    <a class="dropdown-item" href="#">Greater than =</a>
+    <a class="dropdown-item" href="#">Between</a>
+  </div>
+  </div>
+</div>
+ <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Apply Filter</button>
+      </div>
+    </div>
+  </div>
+</div>
+

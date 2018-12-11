@@ -1,0 +1,50 @@
+
+<div ng-show="enableCheckout" class="container">
+<div class="row mb-4">
+	<div class="col-md-1"></div>
+      <div class="col-md-12">
+      <center><p style="color:#5da979;"> Total Price: {{totalPrice}} INR </p>
+      
+     
+      <button  class="btn btn-warning " style="line-height: 1; color:white" ng-click="placeOrder()" >
+           Place Order 
+        </button>
+        </center>
+      </div>
+      
+      
+      </div>
+      
+
+
+<div class="row mb-1" ng-repeat="item in cart">
+      <div class="col-md-12">
+      
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">{{item.name}} {{item.family}}</strong>
+
+              
+            <h6 class="mb-0">
+                <p class="text-dark" >Quantity: <span style="color:#5da979;">{{item.quantity}}</span></p>
+              </h6>
+            <h6 class="mb-0">
+                <p class="text-dark" >Price: {{item.price}} INR (<span style="color:orange">{{item.basePrice}}</span>*<span style="color:#5da979">{{item.quantity}}</span>)</p>
+              </h6>
+            <div> <br>
+            <button type="button" class="btn btn-info" style="font-size: 27px; font-weight: bolder; padding: 0px; width:31px; height:39px; border-radius:6px;" aria-haspopup="true" aria-expanded="false" ng-click="deleteItems(item,$index,'C')"> -
+  </button>
+  <input type="text" style="width: 32px; text-align:center; height: 36px;border: 1px solid grey; border-radius: 6px" ng-model="item.quantity" ng-disabled="true">
+    
+  <button type="button" class="btn btn-info" style="font-size: 27px; font-weight: bolder; width:31px; height:39px; border-radius:6px;padding: 0px;" aria-haspopup="true" ng-click="addItems(item,$index,'C')" aria-expanded="false"> + 
+  </button></div>
+            </div>
+        <hr>    
+      </div>
+</div>      
+      </div>
+      
+      <div ng-show="!enableCheckout">
+      <br>
+      <center><h5>Your cart is empty.</h5></center>
+    </div>  
+    

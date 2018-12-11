@@ -1,0 +1,48 @@
+
+
+<!-- Modal -->
+<div class="modal fade" id="selectionSpecific" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{selectionHeading}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div  style="overflow-y: auto; max-height: 450px; overflow-x:hidden">
+      <div class="row mb-1" ng-repeat="item in specificFoodList">
+      <div class="col-md-12">
+      
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">{{item.name}} {{family}}</strong>
+              <div><h6 style="color:#5da979;">{{item.price}} INR</h6></div>
+              <div><h6 >Ingrediants :</h6></div>
+              <div ng-repeat="ingrediants in item.specificIngrediants">
+              <p class="card-text mb-auto" style= "color:blue" >{{ingrediants}}</p></div>
+              </h6>
+              <br>
+              
+            
+            <div> <br><button type="button" class="btn btn-info" style="font-size: 27px; font-weight: bolder; padding: 0px; width:31px; height:39px; border-radius:6px;" aria-haspopup="true" aria-expanded="false" ng-click="deleteItems(item,$index,'M')"> -
+  </button>
+  <input type="text" style="width: 32px; text-align:center; height: 36px;border: 1px solid grey; border-radius: 6px" ng-model="item.quantity" ng-disabled="true">
+    <button type="button" class="btn btn-info" style="font-size: 27px; font-weight: bolder; width:31px; height:39px; border-radius:6px;padding: 0px;" aria-haspopup="true" ng-click="addItems(item,$index,'M')" aria-expanded="false"> + 
+  </button></div>
+            </div>
+        <hr>    
+      </div>
+      
+      </div>
+      </div>
+     
+   <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">I want more..</button>
+        <!-- <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button> -->
+        <button ng-show="enableCheckout" ng-click="checkout()" type="button"  class="btn btn-info">Proceed</button> 
+      </div>
+    </div>
+  </div>
+</div>
+

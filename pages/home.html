@@ -1,0 +1,103 @@
+
+<br>
+<br>
+
+
+<!-- <div id="containerDiv" class="container">
+    <div class="row">
+      <div class=" jumbotron" id="jumbo">
+        <div ng-repeat="item in foodList"> loop for Content Div's
+          <div style="" class="col-sm-6 col-md-3">
+            <div id="contentDiv" class="thumbnail">
+              <div class="caption">
+                <center>
+                  <img id="contentIcon" src="{{item.imgUrl}}" />
+                </center>
+                <h3>{{item.name}}</h3>
+                <p id="p1">{{item.desc}}</p>
+                <p id="p2">
+                  <a href="#" class="btn btn-success" role="button">Order {{item.name}}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+   -->
+
+
+
+
+<!--  <div class="container">
+<div ng-repeat="item in foodList">
+<div class="card-deck mb-3">
+<div class="card mb-4 box-shadow" style="width: 18rem;">
+  <img class="card-img-top" style="height: 12em;" src="{{item.imgUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    <p class="card-text">{{item.desc}}</p>
+    <a href="#" class="btn btn-primary">Order {{item.name}}</a>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+</div> -->
+<div class="container"> 
+
+<div class="row">
+<div class="col-md-4">
+<button class="btn btn-info " style="line-height: 1;" data-toggle="modal" data-target="#exampleModal" ng-click="filterButton()">
+          Filter 
+        </button></center> </div>
+<div class="col-md-4">
+
+<div><form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" id="searchBox" ng-model="searchItem" ng-change="search()" type="search" placeholder="Search" aria-label="Search">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>  -->   
+    </form>
+</div>
+ </center>
+</div>
+<div class="col-md-4">
+<button data-ng-show="enableCheckout"  class="btn btn-warning " style="line-height: 1; color:white"   ng-click="checkout()">
+           Checkout 
+        </button> </div>
+        
+</div>
+
+
+<br>
+
+<div class="row">
+<div class="col-md-4" ng-repeat="item in filteredFoodList">
+<div class="card mb-4 box-shadow" style="">
+  <img class="card-img-top" style="height: 12em;" src="{{item.imgUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+     <h6 class="mb-0">
+                <div><h6 style="text-decoration">Ingrediants :</h6></div>
+                <div ng-repeat="ingrediants in item.commonIngrediants">
+              <p class="card-text mb-auto" style= "color:blue" >{{ingrediants}}</p></div>
+              </h6>
+              <br>
+              
+              
+     <!-- <button class="btn btn-info btn-lg" style="line-height: 1;" data-toggle="modal" data-target="#exampleModal" ng-click="filterButton()">
+          <span style="background-color: white; display:contents;">1</span> Filter 
+        </button>  -->
+    <a data-toggle="modal" style="color:white" ng-click="selection(item,$index)" data-target="#selectionSpecific" class="btn btn-info ">Order {{item.name}}</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div ng-include = "'pages/filter.html'"></div>
+<div ng-include = "'pages/selectionSpecific.html'"></div>
